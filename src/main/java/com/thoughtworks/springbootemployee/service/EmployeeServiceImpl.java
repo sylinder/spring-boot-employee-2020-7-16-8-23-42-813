@@ -18,4 +18,11 @@ public class EmployeeServiceImpl implements EmployeeService{
     public List<Employee> getAllEmployees() {
         return employees;
     }
+
+    @Override
+    public void addEmployee(Employee employee) {
+        employees.add(employee);
+    }
+
+
 }
