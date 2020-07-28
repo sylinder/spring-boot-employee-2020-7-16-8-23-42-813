@@ -24,5 +24,15 @@ public class EmployeeServiceImpl implements EmployeeService{
         employees.add(employee);
     }
 
+    @Override
+    public void deleteEmployeeById(int id) {
+        for (Employee employee : employees) {
+            if (employee.getId() == id) {
+                employees.remove(employee);
+            }
+            return ;
+        }
+    }
+
 
 }
