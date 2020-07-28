@@ -34,5 +34,16 @@ public class EmployeeServiceImpl implements EmployeeService{
         }
     }
 
+    @Override
+    public void updateEmployee(Employee employee) {
+        for (Employee innerEmployee : employees) {
+            if (innerEmployee.getId() == employee.getId()) {
+                employees.remove(innerEmployee);
+                employees.add(employee);
+                return ;
+            }
+        }
+    }
+
 
 }
