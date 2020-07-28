@@ -32,4 +32,9 @@ public class EmployeeController {
     public void updateEmployee(@RequestBody Employee employee) {
         employeeService.updateEmployee(employee);
     }
+
+    @GetMapping("/employees/{id}")
+    public Employee getEmployeeById(@PathVariable int id) {
+        return employeeService.getEmployeeById(id);
+    }
 }
